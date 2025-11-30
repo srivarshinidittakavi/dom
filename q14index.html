@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle Text & Background</title>
+</head>
+<body>
+  <p id="message">Original Message</p>
+  <button id="textButton">Change Text</button>
+  <br><br>
+  <div id="box" style="width:100px; height:100px; background-color:lightgray;"></div>
+  <button id="colorButton">Change Background</button>
+
+  <script>
+    const para = document.getElementById('message');
+    const textButton = document.getElementById('textButton');
+    const box = document.getElementById('box');
+    const colorButton = document.getElementById('colorButton');
+
+    textButton.addEventListener('click', () => {
+      if (para.textContent === 'Original Message') {
+        para.textContent = 'New Message';
+      } else {
+        para.textContent = 'Original Message';
+      }
+    });
+
+    colorButton.addEventListener('click', () => {
+      if (box.style.backgroundColor === 'blue') {
+        box.style.backgroundColor = 'lightgray';
+      } else {
+        box.style.backgroundColor = 'blue';
+      }
+    });
+  </script>
+</body>
+</html>
